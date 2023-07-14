@@ -36,6 +36,15 @@ module NestedForm
       end
     end
 
+    if defined?(BootstrapForm::FormBuilder)
+      def bootstrap_nested_form_for(*args, &block)
+        options = args.extract_options!.reverse_merge(:builder => NestedForm::BootstrapFormBuilder)
+        bootstrap_form_for(*(args << options)) do |f|
+          capture(f, &block).to_s << after_nested_form_callbacks
+        end
+      end
+    end
+
     def after_nested_form(association, &block)
       @associations ||= []
       @after_nested_form_callbacks ||= []

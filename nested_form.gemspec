@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = "nested_form"
-  s.version     = "0.3.2"
-  s.authors     = ["Ryan Bates", "Andrea Singh"]
-  s.email       = "ryan@railscasts.com"
-  s.homepage    = "http://github.com/ryanb/nested_form"
+  s.version     = "0.3.3"
+  s.authors     = ["Ryan Bates", "Andrea Singh", "Sean Naegle"]
+  s.email       = "sean@naegles.com"
+  s.homepage    = "http://github.com/scnaegl/nested_form"
   s.summary     = "Gem to conveniently handle multiple models in a single form."
   s.description = "Gem to conveniently handle multiple models in a single form with Rails 3 and jQuery or Prototype."
 
