@@ -1,6 +1,6 @@
-# Unmaintained
+# Maintained
 
-The Nested Form gem is **no longer maintained**. Feel free to fork this project.
+The Nested Form gem is **now maintained**. Feel free to fork this project.
 
 # Nested Form
 
@@ -39,6 +39,22 @@ You can then include the generated JavaScript in your layout.
 
 ```erb
 <%= javascript_include_tag :defaults, "nested_form" %>
+```
+
+### Importmap Setup
+
+```
+# config/initializers/assets.rb
+#Rails.application.config.assets.paths << NestedForm.root.join('vendor/javascripts')
+
+# config/importmap.rb
+pin "jquery_nested_form"
+
+# app/assets/config/manifest.js
+//= link jquery_nested_form
+
+# app/javascript/application.js (or your controller)
+import "jquery_nested_form"
 ```
 
 ## Usage
